@@ -70,12 +70,12 @@ jar.dependsOn(testJar)
 
 artifacts {
     archives (jar.archivePath) {
-        name = projectName
+        name = 'box'
         type = 'jar'
         classifier = 'jar'
     }
     archives (testJar.archivePath) {
-        name = projectName
+        name = 'box'
         type = 'jar'
         classifier = 'test'
     }
