@@ -69,6 +69,14 @@ testJar.manifest.writeTo("$buildDir/test-manifest.mf")
 jar.dependsOn(testJar)
 
 artifacts {
-    archives jar
-    archives testJar
+    archives (jar.archivePath) {
+        name = projectName
+        type = 'jar'
+        classifier = 'jar'
+    }
+    archives (testJar.archivePath) {
+        name = projectName
+        type = 'jar'
+        classifier = 'test'
+    }
 }
